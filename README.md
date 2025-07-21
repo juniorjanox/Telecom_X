@@ -15,14 +15,18 @@ El proyecto está organizado de la siguiente manera:
 
 ```
 TelecomX/
-├── TelecomX_Data.json # Archivo con los datos de clientes y sus características
-├── TelecomX_diccionario.md # Diccionario de datos con explicación de cada variable
-├── TelecomX_LATAM.ipynb # Notebook principal con análisis exploratorio y visualizaciones
+├── TelecomX_Data.json
+├── TelecomX_diccionario.md
+├── TelecomX_LATAM.ipynb
 ├── images/
-│   ├── ingresos_por_tienda.png
-│   ├── mapa_calor_ingresos.png
-│   └── calificacion_promedio.png
-├──  README.md                  
+│   ├── distribucion_evasion.png
+│   ├── evasion_por_genero.png
+|   ├── evasion_por_tipo_contrato.png
+│   ├── evasion_por_metodo_pago.png
+|   ├── evasion_por_servicio_internet.png
+│   ├── evasion_por_seguridad_online.png
+|   └── evasion_por_soporte_tecnico.png
+│   ├──  README.md                  
 ```
 
 - **`images/`**: Esta carpeta contiene las imágenes generadas a partir del análisis de datos, incluyendo gráficos, mapas y visualizaciones clave del proyecto.
@@ -38,46 +42,66 @@ TelecomX/
 
 ---
 
+
 ## 📈 Ejemplos de Gráficos e Insights Obtenidos
 
-### 🔸 Distribución de Evasión (`distribucion_churn.png`)
-![Distribución de Evasión](images/distribucion_churn.png)  
+### 🔸 Distribución de Evasión (`distribucion_evasion.png`)
+![Distribución de Evasión](images/distribucion_evasion.png)  
 El 26.6% de los clientes abandonaron el servicio. Esta tasa de evasión es considerable y merece atención estratégica.
 
 ---
 
-### 🔸 Correlación entre Variables (`correlacion_variables.png`)
-![Correlación](images/correlacion_variables.png)  
-Se observa una alta correlación positiva entre la evasión y factores como:
-- **Meses como cliente (tenure)**: los clientes nuevos tienden a abandonar más rápido.
-- **Ingresos mensuales bajos** también se asocian con mayor evasión.
-- Contratos mensuales tienen mayor probabilidad de evasión frente a contratos anuales.
+### 🔸 Evasión por Género (`evasion_por_genero.png`)
+![Evasión por Género](images/evasion_por_genero.png)  
+No se observan diferencias significativas entre hombres y mujeres en cuanto a evasión. Ambos géneros presentan tasas similares.
 
 ---
 
-### 🔸 Ingresos Mensuales vs Churn (`ingresos_vs_churn.png`)
-![Ingresos](images/ingresos_vs_churn.png)  
-Los clientes con ingresos mensuales bajos son más propensos a cancelar el servicio.
+### 🔸 Evasión por Tipo de Contrato (`evasion_por_tipo_contrato.png`)
+![Evasión por Tipo de Contrato](images/evasion_por_tipo_contrato.png)  
+Los contratos **"Mes a Mes"** presentan una tasa de cancelación notablemente más alta. En cambio, los contratos a largo plazo ofrecen mayor retención.
 
 ---
 
-### 🔸 Tipo de Contrato vs Churn (`contratos_vs_churn.png`)
-![Contrato](images/contratos_vs_churn.png)  
-Los contratos de tipo "Mes a Mes" tienen la mayor tasa de cancelación, mientras que los contratos a largo plazo retienen mejor a los clientes.
+### 🔸 Evasión por Método de Pago (`evasion_por_metodo_pago.png`)
+![Evasión por Método de Pago](images/evasion_por_metodo_pago.png)  
+Los clientes que pagan con **tarjeta de crédito** o **transferencia bancaria** tienden a permanecer más tiempo que los que usan medios electrónicos o cheques.
 
 ---
 
-### 🔸 Número de Servicios Contratados (`servicios_vs_churn.png`)
-![Servicios](images/servicios_vs_churn.png)  
-Cuantos más servicios tiene un cliente, menor es su probabilidad de evasión. Ofrecer paquetes integrados puede ser una buena estrategia de retención.
+### 🔸 Evasión por Tipo de Servicio de Internet (`evasion_por_servicio_internet.png`)
+![Evasión por Servicio de Internet](images/evasion_por_servicio_internet.png)  
+Los clientes con **servicio de fibra óptica** muestran mayor evasión, posiblemente por precios más altos o fallas frecuentes.
 
 ---
 
-## 🧪 Cómo Ejecutar el Notebook
+### 🔸 Evasión por Seguridad en Línea (`evasion_por_seguridad_online.png`)
+![Evasión por Seguridad en Línea](images/evasion_por_seguridad_online.png)  
+Los clientes **sin servicio de seguridad en línea** abandonan con más frecuencia. Este servicio puede ser un diferenciador de valor.
 
-1. Asegúrate de tener Python 3.8+ y Jupyter Notebook instalado.
-2. Clona este repositorio o descarga los archivos.
-3. Instala las dependencias necesarias:
-   ```bash
-   pip install pandas matplotlib seaborn
+---
+
+### 🔸 Evasión por Soporte Técnico (`evasion_por_soporte_tecnico.png`)
+![Evasión por Soporte Técnico](images/evasion_por_soporte_tecnico.png)  
+La evasión es mayor entre quienes **no tienen soporte técnico contratado**. Invertir en atención postventa puede mejorar la fidelización.
+
+---
+
+---
+
+## 🚀 Instrucciones para Ejecutar el Notebook
+
+Para ejecutar este análisis en tu entorno de Google Colab, sigue estos pasos:
+
+1. **Abre el Notebook:** Ve a Google Colab y abre el archivo `TelecomX_LATAM.ipynb` (o el nombre que le hayas dado) desde tu repositorio de GitHub. Puedes ir a `File > Open notebook > GitHub` y pegar la URL de tu repositorio.
+    
+2. **Verifica las Librerías:** Asegúrate de que las librerías necesarias estén instaladas. El notebook utiliza `pandas`, `matplotlib` y `seaborn`. En Google Colab, estas librerías ya vienen preinstaladas en la mayoría de los casos. Si alguna no lo está, puedes instalarla con `!pip install <nombre_libreria>`.
+    
+3. **Ejecuta las Celdas:** Ejecuta cada celda del notebook secuencialmente.
+    
+    - La primera celda cargará los datos de las URLs, y realizará la limpieza y preparación de los datos para cada tienda..
+        
+    - Las secciones posteriores generarán los análisis y gráficos correspondientes a cada punto (Facturación, Categorías, Calificación, Productos, Envío, Extra).
+        
+4. **Revisa la Salida:** Observa las tablas de resultados impresas y los gráficos generados después de ejecutar cada sección. Estos te proporcionarán los _insights_ clave para el desafío.
 
