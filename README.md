@@ -27,17 +27,14 @@ TelecomX/
 
 - **`images/`**: Esta carpeta contiene las imágenes generadas a partir del análisis de datos, incluyendo gráficos, mapas y visualizaciones clave del proyecto.
   
-- **`base-de-datos-challenge1-latam/`**: Esta carpeta contiene los archivos CSV originales con los datos de ventas de cada una de las cuatro tiendas de Alura Store (`tienda_1.csv` a `tienda_4.csv`). Estos datos son la fuente principal para el análisis.
+- **`TelecomX_Data.json`**: Archivo con los datos de clientes y sus características
     
-- **`AluraStoreLatam.ipynb`**: Este es el notebook principal (archivo de Google Colab o Jupyter) donde se realiza todo el análisis de datos. Contiene el código para cargar, limpiar, procesar y visualizar los datos, así como las conclusiones y recomendaciones.
+- **`TelecomX_diccionario.md`**: Diccionario de datos con explicación de cada variable
+
+- - **`TelecomX_LATAM.ipynb`**: Notebook principal con análisis exploratorio y visualizaciones
     
 - **`README.md`**: Este archivo, que estás leyendo ahora mismo, proporciona una descripción general del proyecto.
     
-
----
-
-## 📊 Ejemplos de Gráficos e Insights Obtenidos
-
 
 ---
 
